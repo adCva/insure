@@ -23,7 +23,7 @@ function Hero() {
 
 
     return (
-        <div className="hero-wrapper">
+        <div className="hero-wrapper" id="about">
             <div className="hero-container">
                 <div className="hero-img-container">
                     <img src={mobileImageSize ? "./images/image-intro-mobile.jpg" : "./images/image-intro-desktop.jpg"} alt="Hero Thumbnail" />

@@ -1,5 +1,5 @@
 .footer-wrapper {
-    background-color: #e7e7e7;
+    background-color: #fafafa;
     background-image: url("../Assets/bg-pattern-footer-mobile.svg");
     background-size: cover;
     background-position: center;
@@ -14,7 +14,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 40vw;
+        background-size: 530px;
         background-position-x: 0;
         background-position-y: 0;
     }
@@ -28,24 +28,23 @@
         padding: 4.5rem 0;
         text-align: center;
     
-        .footer-first {
-            /*&:after {
-                content: "";
-                display: block;
-                height: 1.5px;
-                width: 100%;
-                background-color: $dark-grayish-violet;
-                margin-top: 1rem;
-            }*/
-            
+        .footer-first {            
             img {
                 margin-bottom: 1.5rem;
             }
     
             .footer-link {
                 margin-right: 1rem;
+                cursor: pointer;
+                transition: all 0.25s ease-in-out;
+
                 &:last-of-type {
                     margin-right: 0;
+                }
+                
+
+                @media (min-width: 768px) {
+                    margin-right: 1.5rem;
                 }
             }
         
@@ -72,7 +71,13 @@
                 height: 1.5px;
                 width: 100%;
                 background-color: $dark-grayish-violet;
-                margin: 1rem 0;
+                margin: 1rem 0 3rem;
+            }
+
+            @media (min-width: 768px) {
+                &:before {
+                    margin: 2rem 0;
+                }
             }
         }
     
@@ -107,7 +112,7 @@
                     font-size: 14.5px;
                     font-weight: $fw-body-bold;
                     text-transform: uppercase;
-                    margin-bottom: 1rem;
+                    margin-bottom: 2rem;
                 }
     
                 button {
@@ -117,9 +122,18 @@
                     font-size: 15px;
                     font-weight: $fw-body-bold;
                     text-transform: uppercase;
-                    margin-bottom: 0.7rem;
+                    margin-bottom: 0.85rem;
+                    cursor: pointer;
+                    transition: all 0.25s ease-in-out;
                     &:last-of-type {
                         margin-bottom: 0;
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                    &:focus {
+                        text-decoration: underline;
                     }
                 }
             }

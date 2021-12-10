@@ -55,13 +55,13 @@ function Nav() {
     return (
         <nav className="nav-wrapper">
             <div className="nav-container">
-                <img src="./images/logo.svg" alt="Logo" />
+                <img src="./images/logo.svg" alt="Logo" className="logo" />
                 <img src={mobileMenu ? "./images/icon-close.svg" : "./images/icon-hamburger.svg"} alt="Logo" className="mobile-btn" onClick={toggleMobileMenu} />
                 {transition((style, mobileMenu) => mobileMenu ? (
                     <animated.div style={style} className="nav-menu">
                         <Link to='about' smooth={true} duration={500} spy={true} exact='true' className="nav-link" onClick={closeMenu}>How we work</Link>
-                        <Link to='about' smooth={true} duration={500} spy={true} exact='true' className="nav-link" onClick={closeMenu}>Blog</Link>
-                        <Link to='about' smooth={true} duration={500} spy={true} exact='true' className="nav-link" onClick={closeMenu}>Account</Link>
+                        <Link to='blog' smooth={true} duration={500} spy={true} exact='true' className="nav-link" onClick={closeMenu}>Blog</Link>
+                        <Link to='account' smooth={true} duration={500} spy={true} exact='true' className="nav-link" onClick={closeMenu}>Account</Link>
                         <button className="nav-btn" onClick={onClickMessage}>View plans</button>
                     </animated.div>
                 ) : null)}

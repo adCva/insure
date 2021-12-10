@@ -6,15 +6,23 @@
 @import "footer";
 
 body {
-    background-color: $very-light-gray;
     color: $very-dark-violet;
     font-family: $ff-body;
     font-weight: $fw-body-regular;
     font-size: 16px;
+    position: relative;
 }
 
 main {
     padding: 10rem 0 5rem;
+
+    @media (min-width: 768px) {
+        padding: 14rem 0 10rem;
+    }
+
+    @media (min-width: 1200px) {
+        padding: 16rem 0 10rem;
+    }
 }
 
 .btn {
@@ -26,9 +34,10 @@ main {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 14px;
+    font-weight: $fw-body-bold;
     cursor: pointer;
     transition: all 0.25s ease-in-out;
-    z-index: 999;
+    z-index: 99;
 
     &:hover {
         background-color: $very-light-gray;
