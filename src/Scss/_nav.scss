@@ -1,0 +1,148 @@
+.nav-wrapper {
+    background-color: $very-light-gray;
+    padding: 1.5rem 0;
+
+    @media (min-width: 768px) {
+        padding: 1rem 0;
+    }
+
+    .nav-container {
+        width: 90%;
+        max-width: 1350px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 9999;
+
+
+        .mobile-btn {
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+
+
+        // Nav menu.
+        .nav-menu {
+            background-color: $very-dark-violet;
+            position: fixed;
+            top: 5rem;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            
+            background-image: url("../Assets/bg-pattern-mobile-nav.svg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100vw;
+            background-position-y: 100%;
+
+            @media (orientation: landscape) {
+                background-position-y: -100%;
+            }
+
+            @media (min-width: 768px) {
+                background-color: transparent;
+                position: initial;
+                flex-direction: row;
+                background-image: none;
+            }
+
+
+
+            // Nav Links.
+            .nav-link {
+                color: $very-light-gray;
+                background: transparent;
+                border: none;
+                outline: none;
+                margin-bottom: 2.5rem;
+                &:first-of-type {
+                    margin-top: 3rem;
+                }
+                font-weight: $fw-body-bold;
+                font-size: 19px;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                cursor: pointer;
+                transition: all 0.25s ease-in-out;
+
+                @media (orientation: landscape) {
+                    &:first-of-type {
+                        margin-top: 1rem;
+                    }
+                }
+
+                @media (min-width: 768px) {
+                    color: $dark-grayish-violet;
+                    margin-bottom: 0;
+                    margin-right: 1rem;
+                    &:first-of-type {
+                        margin-top: 0;
+                    }
+                    font-size: 17px;
+                }
+
+                @media (min-width: 1000px) {
+                    margin-right: 2.5rem;
+                    font-size: 15px;
+                }
+
+                &:hover {
+                    color: $very-dark-violet;
+                }
+            }
+
+
+            // Nav view plans btn.
+            .nav-btn {
+                background: transparent;
+                color: $very-light-gray;
+                width: 90%;
+                height: 58px;
+                border: 2px solid $very-light-gray;
+                font-weight: $fw-body-bold;
+                font-size: 19px;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                cursor: pointer;
+                transition: all 0.25s ease-in-out;
+
+                @media (orientation: landscape) {
+                    background: $very-light-gray;
+                    color: $very-dark-violet;
+                }
+
+                @media (min-width: 768px) {
+                    color: $very-dark-violet;
+                    border: 2px solid $very-dark-violet;
+                    font-size: 17.5px;
+                    width: 150px;
+                    height: 45px;
+                }
+
+                @media (min-width: 1000px) {
+                    font-size: 15.5px;
+                    height: 40px;
+                }
+
+                &:hover {
+                    background: $very-dark-violet;
+                    color: $very-light-gray;
+                }
+
+                &:focus {
+                    background: $very-dark-violet;
+                    color: $very-light-gray;
+                }
+            }
+        }
+    }
+}

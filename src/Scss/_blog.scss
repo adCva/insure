@@ -1,0 +1,49 @@
+.blog-container {
+    background-color: $dark-violet;
+    color: $very-light-gray;
+    width: 90%;
+    height: 300px;
+    max-width: 1350px;
+    margin: 5rem auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+
+    background-image: url("../Assets/bg-pattern-how-we-work-mobile.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40vw;
+    background-position-x: 100%;
+    background-position-y: 0;
+
+    @media (min-width: 768px) {
+        text-align: left;
+        height: 150px;
+        flex-direction: row;
+        justify-content: space-between;
+        background-image: url("../Assets/bg-pattern-how-we-work-desktop.svg");
+    }
+
+    @media (min-width: 1200px) {
+        height: 200px;
+        padding: 0 3rem;
+        background-image: url("../Assets/bg-pattern-how-we-work-desktop.svg");
+        background-size: 50vw;
+    }
+
+
+    h2 {
+        font-family: $ff-headings;
+        font-size: 35px;
+        margin: 0 0 2rem;
+
+        @media (min-width: 768px) {
+            font-size: 25px;
+            margin: 0;
+        }
+    }
+}
