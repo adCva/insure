@@ -1,5 +1,5 @@
 .nav-wrapper {
-    background-color: $very-light-gray;
+    background-color: #ffffff;
     padding: 1rem 0;
     position: fixed;
     top: 0;
@@ -10,7 +10,7 @@
 
     .nav-container {
         width: 90%;
-        max-width: 1350px;
+        max-width: 1200px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
@@ -73,6 +73,7 @@
             // Nav Links.
             .nav-link {
                 color: $very-light-gray;
+                position: relative;
                 background: transparent;
                 border: none;
                 outline: none;
@@ -88,6 +89,7 @@
                 transition: all 0.25s ease-in-out;
 
                 @media (orientation: landscape) {
+                    margin-bottom: 1.5rem;
                     &:first-of-type {
                         margin-top: 1rem;
                     }
@@ -100,16 +102,34 @@
                     &:first-of-type {
                         margin-top: 0;
                     }
-                    font-size: 16px;
+                    font-size: 15px;
+
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        width: 100%;
+                        height: 1px;
+                        top: 100%;
+                        left: 0;
+                        background: $dark-grayish-violet;
+                        transition: transform 0.5s;
+                        transform: scaleX(0);
+                        transform-origin: center;
+                    }
+    
+                    &:hover {
+                        color: $very-dark-violet;
+    
+                        &:after {
+                            transform: scaleX(1);
+                            transform-origin: center;
+                        }
+                    }
                 }
 
                 @media (min-width: 1000px) {
                     margin-right: 2rem;
                     font-size: 14px;
-                }
-
-                &:hover {
-                    color: $very-dark-violet;
                 }
             }
 
@@ -136,15 +156,15 @@
                 @media (min-width: 768px) {
                     color: $very-dark-violet;
                     border: 2px solid $very-dark-violet;
-                    font-size: 16px;
+                    font-size: 15px;
                     width: 130px;
                     height: 40px;
                 }
 
                 @media (min-width: 1000px) {
-                    font-size: 15.5px;
-                    width: 140px;
-                    height: 37px;
+                    font-size: 14.5px;
+                    width: 135px;
+                    height: 35px;
                 }
 
                 &:hover {

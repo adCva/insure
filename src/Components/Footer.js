@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaFacebookSquare, FaTwitter, FaPinterest, FaInstagram } from "react-icons/fa";
 
 
 function Footer() {
@@ -8,10 +9,10 @@ function Footer() {
                 <div className="footer-first">
                     <img src="./images/logo.svg" alt="Logo" />
                     <div className="footer-social">
-                        <a className="footer-link" rel="noreferrer" target="_blank" href="https://www.facebook.com/"><img src="./images/icon-facebook.svg" alt="Facebook" /></a>
-                        <a className="footer-link" rel="noreferrer" target="_blank" href="https://twitter.com/"><img src="./images/icon-twitter.svg" alt="Twitter" /></a>
-                        <a className="footer-link" rel="noreferrer" target="_blank" href="https://www.pinterest.com/"><img src="./images/icon-pinterest.svg" alt="Pinterest" /></a>
-                        <a className="footer-link" rel="noreferrer" target="_blank" href="https://www.instagram.com/"><img src="./images/icon-instagram.svg" alt="Instagram" /></a>
+                        <a className="footer-link" rel="noreferrer" target="_blank" href="https://www.facebook.com/"><FaFacebookSquare /></a>
+                        <a className="footer-link" rel="noreferrer" target="_blank" href="https://twitter.com/"><FaTwitter /></a>
+                        <a className="footer-link" rel="noreferrer" target="_blank" href="https://www.pinterest.com/"><FaPinterest /></a>
+                        <a className="footer-link" rel="noreferrer" target="_blank" href="https://www.instagram.com/"><FaInstagram /></a>
                     </div>
                 </div>
 

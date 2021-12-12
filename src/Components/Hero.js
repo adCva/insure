@@ -21,6 +21,11 @@ function Hero() {
     });
 
 
+    const onClcikMessage = () => {
+        alert("This button does nothing.");
+    };
+
+
 
     return (
         <div className="hero-wrapper" id="about">
@@ -31,7 +36,7 @@ function Hero() {
                 <div className="hero-text">
                     <h1>Humanizing your insurance.</h1>
                     <p>Get your life insurance coverage easier and faster. We blend our expertise and technology to help you find the plan that’s right for you. Ensure you and your loved ones are protected.</p>
-                    <button className="btn">View plans</button>
+                    <button className="btn" onClick={onClcikMessage}>View plans</button>
                 </div>
             </div>
             <img src="./images/bg-pattern-intro-right-desktop.svg" alt="Right" className="hero-decoration-right"/>

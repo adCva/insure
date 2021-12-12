@@ -6,3 +6,4 @@ Insure landing page with ReactJS & Scss.
 
 React Spring<br>
 React Scroll<br>
+React Icons<br>
